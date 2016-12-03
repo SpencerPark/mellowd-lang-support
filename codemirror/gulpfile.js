@@ -7,7 +7,6 @@ module.exports = function (gulp) {
         name: "codemirror",
         tasks: {
             "build": {
-                dependencies: ["clean"],
                 func: function () {
                     var tsProject = ts.createProject("./codemirror/tsconfig.json");
                     return tsProject.src()

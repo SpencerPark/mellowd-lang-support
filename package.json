@@ -3,11 +3,13 @@
   "version": "1.0.0",
   "description": "A collection of projects providing support in editors for the MellowD language.",
   "homepage": "https://github.com/SpencerPark/mellowd-lang-support",
-  "dependencies": { },
+  "dependencies": {},
   "devDependencies": {
     "del": "^2.2.2",
     "gulp": "^3.9.1",
+    "gulp-archiver": "^1.0.0",
     "gulp-typescript": "^3.1.3",
+    "merge-stream": "^1.0.1",
     "typescript": "^2.0.10"
   },
   "scripts": {

@@ -57,7 +57,7 @@ namespace MellowDCodeMirrorMode {
         'min6': true
     };
 
-    const matchID = (stream: StringStream): string => {
+    function matchID(stream: StringStream): string {
         let capture: string[] = stream.match(IDENTIFIER_CHARS, true);
 
         if (!capture) return null;
@@ -67,9 +67,9 @@ namespace MellowDCodeMirrorMode {
             return null;
 
         return id;
-    };
+    }
 
-    const chordStart = (stream: StringStream): string => {
+    function chordStart(stream: StringStream): string {
         let containsIllegalIDChars: boolean = false;
 
         if (stream.eat('#') || stream.eat('$'))
@@ -89,9 +89,9 @@ namespace MellowDCodeMirrorMode {
         } else {
             return containsIllegalIDChars ? ERROR : checkID(stream.current());
         }
-    };
+    }
 
-    const noteStart = (stream: StringStream): string => {
+    function noteStart(stream: StringStream): string {
         let containsIllegalIDChars: boolean = false;
 
         if (stream.eat('#') || stream.eat('$'))
@@ -109,9 +109,9 @@ namespace MellowDCodeMirrorMode {
         } else {
             return NOTE;
         }
-    };
+    }
 
-    const beatStart = (stream: StringStream): string => {
+    function beatStart(stream: StringStream): string {
         let containsIllegalIDChars: boolean = false;
 
         if (stream.eatWhile('.'))
@@ -122,7 +122,7 @@ namespace MellowDCodeMirrorMode {
         } else {
             return BEAT;
         }
-    };
+    }
 
     function lowerLetterStart(stream: StringStream, state: MellowDState): string {
         let inNoteCtx: boolean = state.melodyDepth > 0 || state.chordDepth > 0;
@@ -153,15 +153,15 @@ namespace MellowDCodeMirrorMode {
                 matchID(stream);
                 return checkID(stream.current());
         }
-    };
+    }
 
-    const checkID = (current: string): string => {
+    function checkID(current: string): string {
         if (keywords[current]) return KEYWORD;
         if (dynamics[current]) return DYNAMIC;
         return ID;
-    };
+    }
 
-    const token = (stream: StringStream, state: MellowDState): string => {
+    function token(stream: StringStream, state: MellowDState): string {
         //This is the most common so check it first and get rid of it quickly
         if (stream.eatSpace()) return null;
 
@@ -260,7 +260,7 @@ namespace MellowDCodeMirrorMode {
 
         stream.next();
         return null;
-    };
+    }
 
     CodeMirror.defineMode('mellowd', (config: CodeMirror.EditorConfiguration): CodeMirror.Mode<MellowDState> => {
         return {
