@@ -1,0 +1,12 @@
+{
+  "name": "mellowd-lang-support:brackets-plugin",
+  "title": "MellowD Syntax Highlighter",
+  "description": "Add syntax highlighting support in Brackets for the MellowD language.",
+  "homepage": "https://github.com/SpencerPark/mellowd-lang-support",
+  "version": "1.0.0",
+  "author": "Spencer Park",
+  "license": "MIT",
+  "engines": {
+    "brackets": ">=0.24.0"
+  }
+}

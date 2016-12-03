@@ -1,0 +1,15 @@
+{
+  "name": "mellowd-lang-support:codemirror",
+  "version": "1.0.0",
+  "description": "A CodeMirror mode for the MellowD language.",
+  "homepage": "https://github.com/SpencerPark/mellowd-lang-support",
+  "main": "mellowd.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Spencer Park",
+  "license": "MIT",
+  "dependencies": {
+    "@types/codemirror": "0.0.35"
+  }
+}
