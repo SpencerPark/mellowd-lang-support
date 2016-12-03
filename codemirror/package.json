@@ -1,5 +1,5 @@
 {
-  "name": "mellowd-lang-support:codemirror",
+  "name": "mellowd-codemirror-mode",
   "version": "1.0.0",
   "description": "A CodeMirror mode for the MellowD language.",
   "homepage": "https://github.com/SpencerPark/mellowd-lang-support",
@@ -9,7 +9,7 @@
   },
   "author": "Spencer Park",
   "license": "MIT",
-  "dependencies": {
+  "devDependencies": {
     "@types/codemirror": "0.0.35"
   }
 }

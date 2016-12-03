@@ -3,3 +3,4 @@
 **/package/
 
 .idea/
+**/npm-debug.log
