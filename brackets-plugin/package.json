@@ -5,7 +5,7 @@
   "categories": "language",
   "keywords": [".mlod", "MellowD", "language", "highlight"],
   "homepage": "https://github.com/SpencerPark/mellowd-lang-support",
-  "version": "1.0.0",
+  "version": "1.0.2",
   "author": "Spencer Park",
   "license": "MIT",
   "engines": {

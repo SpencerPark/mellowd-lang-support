@@ -1,4 +1,4 @@
-import * as CodeMirror from "codemirror";
+///<reference types="codemirror"/>
 
 import StringStream = CodeMirror.StringStream;
 

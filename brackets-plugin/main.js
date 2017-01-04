@@ -1,9 +1,10 @@
 define(function (require, exports, module) {
     "use strict";
-    require('mode/mellowd');
 
     const LanguageManager = brackets.getModule("language/LanguageManager"),
-               CodeMirror = brackets.getModule("thirdparty/CodeMirror2/lib/codemirror");
+        CodeMirror = brackets.getModule("thirdparty/CodeMirror2/lib/codemirror");
+
+    require('mode/mellowd');
 
     LanguageManager.defineLanguage("mellowd", {
         name: "MellowD",
