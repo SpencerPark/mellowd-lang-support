@@ -1,4 +1,4 @@
-///<reference types="codemirror"/>
+import * as CodeMirror from "codemirror";
 
 import StringStream = CodeMirror.StringStream;
 
@@ -84,7 +84,7 @@ namespace MellowDCodeMirrorMode {
 
         if (matchID(stream)) return ERROR;
 
-        if (chordIDs[chordID]) {
+        if (!chordID || chordID === '' || chordIDs[chordID]) {
             return CHORD;
         } else {
             return containsIllegalIDChars ? ERROR : checkID(stream.current());
